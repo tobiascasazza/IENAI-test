@@ -57,6 +57,7 @@ fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers'))
 fig_json = fig.to_json()
 
 print(fig_json)
+```
 
 This approach ensures you can transfer the graph data to the frontend application for rendering.
 
