@@ -1,48 +1,53 @@
-Next.js Project with Docker
+# Next.js Project with Docker
 
 This project is set up to work with Docker, simplifying the installation and execution process. Below are the instructions to quickly start the application.
 
-Prerequisites
+## Prerequisites
 
-Docker Desktop: Download and install Docker Desktop.
+- **Docker Desktop**: Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
-Make sure to keep it open while working on this project, as it provides the necessary tools for running Docker containers.
+  Make sure to keep it open while working on this project, as it provides the necessary tools for running Docker containers.
 
-Access to a terminal: Any terminal compatible with Docker, such as your operating system terminal or an IDE like Visual Studio Code.
+- **Access to a terminal**: Any terminal compatible with Docker, such as your operating system terminal or an IDE like Visual Studio Code.
 
-Instructions to Start the Project
+## Instructions to Start the Project
 
-Clone the repository (if you haven’t already):
+1. **Clone the repository** (if you haven’t already):
 
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_NAME>
+   ```bash
+   git clone <REPOSITORY_URL>
+   cd <REPOSITORY_NAME>
+   ```
 
-Build and run the application:
+2. **Build and run the application**:
 
-In the root of the project, execute the following command:
+   In the root of the project, execute the following command:
 
-docker-compose up --build
+   ```bash
+   docker-compose up --build
+   ```
 
-This command:
+   This command:
 
-Builds the required Docker images.
+   - Builds the required Docker images.
+   - Installs all project dependencies.
+   - Starts the application.
 
-Installs all project dependencies.
+3. **Access the application**:
 
-Starts the application.
+   Once the process is complete, open your browser and go to:
 
-Access the application:
+   ```url
+   http://localhost:3000
+   ```
 
-Once the process is complete, open your browser and go to:
+   Here, you can see the application running locally on your machine.
 
-http://localhost:3000
-
-Here, you can see the application running locally on your machine.
-
-Visualizing Graphs Generated with Python
+## Visualizing Graphs Generated with Python
 
 To visualize a graph generated with Python using Plotly, you need to print the graph's JSON to the console. Below is a code example:
 
+````python
 import plotly.graph_objects as go
 
 x = [1, 2, 3, 4, 5]
@@ -55,15 +60,16 @@ print(fig_json)
 
 This approach ensures you can transfer the graph data to the frontend application for rendering.
 
-Additional Notes
+## Additional Notes
 
-If you need to stop the application, use the Ctrl + C shortcut in the terminal where Docker Compose is running.
+- If you need to stop the application, use the `Ctrl + C` shortcut in the terminal where Docker Compose is running.
+- To remove the created containers, you can execute:
 
-To remove the created containers, you can execute:
+    ```bash
+    docker-compose down
+    ```
 
-docker-compose down
-
-If you make changes to the source code, you can rebuild and run the application using the docker-compose up --build command to ensure the changes are reflected correctly.
+- If you make changes to the source code, you can rebuild and run the application using the `docker-compose up --build` command to ensure the changes are reflected correctly.
 
 Enjoy developing! 🚀
-d
+````
