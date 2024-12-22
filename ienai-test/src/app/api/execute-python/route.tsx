@@ -5,7 +5,6 @@ export async function POST(req: NextRequest) {
   try {
     const { code } = await req.json();
 
-
     const options = {
       pythonPath: './venv/Scripts/python.exe', 
       pythonOptions: ['-u'], 

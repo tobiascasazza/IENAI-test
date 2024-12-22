@@ -21,7 +21,7 @@ interface MenuItem {
 const NavMenu: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const isMobile = Boolean(anchorEl);
-  const router = useRouter();
+  const router = useRouter(); 
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>): void => {
     setAnchorEl(event.currentTarget);

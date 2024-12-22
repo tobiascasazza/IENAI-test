@@ -6,9 +6,14 @@ export const executePythonCode = async (code: string) => {
         body: JSON.stringify({ code }),
       });
   
+      if(response.status === 500){
+        const errorResponse = await response.json() 
+        throw new Error(`Error: ${errorResponse.error}`);
+      }
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
+
   
       const result = await response.json();
       return result;

@@ -7,7 +7,7 @@ export const PlotPanel: React.FC<{ plots: { data: never; layout: never }[] }> = 
 
   const plotElements = useMemo(() => {
     return plots.map((plot, index) => (
-      <Plot key={index} data={plot.data} layout={plot.layout} />
+      <Plot key={index} data={plot.data} layout={plot.layout} style={{width: "100%", height: "300px"}}/>
     ));
   }, [plots]);
 
