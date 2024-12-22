@@ -12,7 +12,6 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-    console.log("Python path: ", path.resolve("./venv/bin/python"));
     const options = {
       pythonPath: path.resolve("./venv/bin/python3"),
       pythonOptions: ["-u"],

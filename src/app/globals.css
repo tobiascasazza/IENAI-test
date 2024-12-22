@@ -20,17 +20,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-[role=row], .MuiDataGrid-container--bottom {
+[role="row"],
+.MuiDataGrid-container--bottom {
   background: transparent !important;
 }
-.css-1hr2sou-MuiTablePagination-root{
-  color: white !important
+.css-1hr2sou-MuiTablePagination-root {
+  color: white !important;
 }
 
-.Mui-focused, .MuiOutlinedInput-notchedOutline {
-  border-color: #888 !important 
+.Mui-focused,
+.MuiOutlinedInput-notchedOutline {
+  border-color: #888 !important;
 }
 
-.MuiOutlinedInput-input{
-  color: white !important
+.MuiOutlinedInput-input {
+  color: white !important;
+}
+
+.css-fyswvn {
+  color: black;
+}
+
+.MuiTablePagination-toolbar {
+  color: white;
 }

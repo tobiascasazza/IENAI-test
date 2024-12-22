@@ -1,18 +1,10 @@
 services:
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Expone el puerto del frontend
+      - "3000:3000"
     volumes:
       - /app/venv
     command: sh -c "yarn build && yarn start"
-
-    depends_on:
-      - backend

@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next.js Project with Docker
 
-## Getting Started
+This project is set up to work with Docker, simplifying the installation and execution process. Below are the instructions to quickly start the application.
 
-First, run the development server:
+Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Docker Desktop: Download and install Docker Desktop.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure to keep it open while working on this project, as it provides the necessary tools for running Docker containers.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Access to a terminal: Any terminal compatible with Docker, such as your operating system terminal or an IDE like Visual Studio Code.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Instructions to Start the Project
 
-## Learn More
+Clone the repository (if you haven’t already):
 
-To learn more about Next.js, take a look at the following resources:
+git clone <REPOSITORY_URL>
+cd <REPOSITORY_NAME>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Build and run the application:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+In the root of the project, execute the following command:
 
-## Deploy on Vercel
+docker-compose up --build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Builds the required Docker images.
+
+Installs all project dependencies.
+
+Starts the application.
+
+Access the application:
+
+Once the process is complete, open your browser and go to:
+
+http://localhost:3000
+
+Here, you can see the application running locally on your machine.
+
+Visualizing Graphs Generated with Python
+
+To visualize a graph generated with Python using Plotly, you need to print the graph's JSON to the console. Below is a code example:
+
+import plotly.graph_objects as go
+
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 9, 16, 25]
+fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers'))
+
+fig_json = fig.to_json()
+
+print(fig_json)
+
+This approach ensures you can transfer the graph data to the frontend application for rendering.
+
+Additional Notes
+
+If you need to stop the application, use the Ctrl + C shortcut in the terminal where Docker Compose is running.
+
+To remove the created containers, you can execute:
+
+docker-compose down
+
+If you make changes to the source code, you can rebuild and run the application using the docker-compose up --build command to ensure the changes are reflected correctly.
+
+Enjoy developing! 🚀
