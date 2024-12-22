@@ -47,7 +47,7 @@ This project is set up to work with Docker, simplifying the installation and exe
 
 To visualize a graph generated with Python using Plotly, you need to print the graph's JSON to the console. Below is a code example:
 
-````python
+```python
 import plotly.graph_objects as go
 
 x = [1, 2, 3, 4, 5]
@@ -66,11 +66,14 @@ This approach ensures you can transfer the graph data to the frontend applicatio
 - If you need to stop the application, use the `Ctrl + C` shortcut in the terminal where Docker Compose is running.
 - To remove the created containers, you can execute:
 
-    ```bash
-    docker-compose down
-    ```
+  ```bash
+  docker-compose down
+  ```
 
 - If you make changes to the source code, you can rebuild and run the application using the `docker-compose up --build` command to ensure the changes are reflected correctly.
 
 Enjoy developing! 🚀
-````
+
+```
+
+```
