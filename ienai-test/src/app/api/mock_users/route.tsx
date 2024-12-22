@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server';
-import users from '../../../data/USER_DATA.json'
+import { NextResponse } from "next/server";
+import users from "../../../data/USER_DATA.json";
 
 export async function GET() {
   try {

@@ -1,12 +1,10 @@
-
-import { WelcomeBox } from '@/components/welcome/welcome-box';
-import React from 'react';
-
+import { WelcomeBox } from "@/components/welcome/welcome-box";
+import React from "react";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <WelcomeBox/>
+      <WelcomeBox />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import NavMenu from "@/components/layout/nav-menu";
 
 const geistSans = Geist({
@@ -29,9 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppRouterCacheProvider options={{ key: 'css' }}>
-        <NavMenu />
-        {children}
+        <AppRouterCacheProvider options={{ key: "css" }}>
+          <NavMenu />
+          {children}
         </AppRouterCacheProvider>
       </body>
     </html>

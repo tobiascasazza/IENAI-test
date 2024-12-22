@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
@@ -21,7 +21,7 @@ interface MenuItem {
 const NavMenu: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const isMobile = Boolean(anchorEl);
-  const router = useRouter(); 
+  const router = useRouter();
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>): void => {
     setAnchorEl(event.currentTarget);
@@ -46,13 +46,9 @@ const NavMenu: React.FC = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "black" }}>
         <Toolbar>
-          
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          <Link href={"/"}>
-            {"Tobias's Test App"}
-          </Link>
+            <Link href={"/"}>{"Tobias's Test App"}</Link>
           </Typography>
-        
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {menuItems.map((item) => (
@@ -65,7 +61,7 @@ const NavMenu: React.FC = () => {
               </Button>
             ))}
           </Box>
-          
+
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -80,12 +76,13 @@ const NavMenu: React.FC = () => {
               anchorEl={anchorEl}
               open={isMobile}
               onClose={handleMenuClose}
-              slotProps={{paper: {
-                style: {
-                  backgroundColor: "black",
-                  color: "white",
+              slotProps={{
+                paper: {
+                  style: {
+                    backgroundColor: "black",
+                    color: "white",
+                  },
                 },
-              }
               }}
             >
               {menuItems.map((item) => (
