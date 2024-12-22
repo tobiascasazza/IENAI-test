@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PythonShell } from "python-shell";
 
-// Configuración centralizada
-const PYTHON_PATH = "./venv/Scripts/python.exe";
-const PYTHON_OPTIONS = ["-u"];
-
 export async function POST(req: NextRequest) {
   try {
     const { code } = await req.json();
