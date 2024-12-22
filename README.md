@@ -73,7 +73,3 @@ This approach ensures you can transfer the graph data to the frontend applicatio
 - If you make changes to the source code, you can rebuild and run the application using the `docker-compose up --build` command to ensure the changes are reflected correctly.
 
 Enjoy developing! 🚀
-
-```
-
-```
