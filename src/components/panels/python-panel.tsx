@@ -5,7 +5,7 @@ import { Button, Box, Typography, TextField } from "@mui/material";
 import { executePythonCode } from "@/services/python-calls";
 import dynamic from "next/dynamic";
 import { python } from "@codemirror/lang-python";
-import { PlotPanel } from "../panels/plot-panel";
+import { PlotPanel } from "./plot-panel";
 
 const CodeMirror = dynamic(() => import("@uiw/react-codemirror"), {
   ssr: false,

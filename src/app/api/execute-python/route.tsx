@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PythonShell } from "python-shell";
+import path from "path";
 
 export async function POST(req: NextRequest) {
   try {
@@ -11,9 +12,9 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-
+    console.log("Python path: ", path.resolve("./venv/bin/python"));
     const options = {
-      pythonPath: "./venv/Scripts/python.exe",
+      pythonPath: path.resolve("./venv/bin/python3"),
       pythonOptions: ["-u"],
     };
 

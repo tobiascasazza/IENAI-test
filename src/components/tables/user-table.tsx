@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { User } from "@/models/user";
 import TextField from "@mui/material/TextField";
+import { getUsersData } from "@/services/data-calls";
 
 const getStatusColor = (status: "online" | "offline" | "banned") => {
   switch (status) {
@@ -47,9 +48,9 @@ const columns: GridColDef<User>[] = [
   },
 ];
 
-export const UserTable: React.FC<{ tableData: User[] }> = ({ tableData }) => {
-  const [data, setData] = React.useState<User[]>(tableData);
-  const [filteredData, setFilteredData] = React.useState<User[]>(tableData);
+export const UserTable: React.FC = () => {
+  const [data, setData] = React.useState<User[]>([]);
+  const [filteredData, setFilteredData] = React.useState<User[]>([]);
   const [searchQuery, setSearchQuery] = React.useState("");
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,9 +66,11 @@ export const UserTable: React.FC<{ tableData: User[] }> = ({ tableData }) => {
   };
 
   React.useEffect(() => {
-    setData(tableData);
-    setFilteredData(tableData);
-  }, [tableData]);
+    getUsersData().then((response) => {
+      setData(response);
+      setFilteredData(response);
+    });
+  }, []);
 
   return (
     <Box sx={{ width: "100%", padding: "10px", overflowX: "auto" }}>
