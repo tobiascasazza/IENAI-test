@@ -74,34 +74,37 @@ export const UserTable: React.FC = () => {
 
   return (
     <Box sx={{ width: "100%", padding: "10px", overflowX: "auto" }}>
-      <TextField
-        label="Search"
-        variant="outlined"
-        value={searchQuery}
-        onChange={handleSearchChange}
-        sx={searcherCustomStyles}
-      />
-      <DataGrid
-        rows={filteredData}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 5,
+      <Box sx={{ minWidth: "max-content" }}>
+        <TextField
+          label="Search"
+          variant="outlined"
+          value={searchQuery}
+          onChange={handleSearchChange}
+          sx={searcherCustomStyles}
+        />
+        <DataGrid
+          rows={filteredData}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 5,
+              },
             },
-          },
-        }}
-        pageSizeOptions={[5, 25, 50, 100]}
-        disableRowSelectionOnClick
-        sx={dataGridCustomStyles}
-      />
+          }}
+          pageSizeOptions={[5, 25, 50, 100]}
+          disableRowSelectionOnClick
+          sx={dataGridCustomStyles}
+        />
+      </Box>
     </Box>
   );
 };
 
 const searcherCustomStyles = {
-  marginBottom: "20px",
+  minWidth: "max-content",
   width: "100%",
+  marginBottom: "20px",
   "& .MuiInputBase-root": {
     backgroundColor: "#333",
     color: "white",
