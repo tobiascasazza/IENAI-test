@@ -71,13 +71,15 @@ const PythonPanel: React.FC = () => {
           Python Code Editor
         </Typography>
 
-        <CodeMirror
-          value={code}
-          height="300px"
-          extensions={[python()]}
-          theme="dark"
-          onChange={(value) => setCode(value)}
-        />
+        <Box sx={{ height: "300px" }}>
+          <CodeMirror
+            value={code}
+            height="300px"
+            extensions={[python()]}
+            theme="dark"
+            onChange={(value) => setCode(value)}
+          />
+        </Box>
 
         <Button variant="contained" sx={{ mt: 2 }} onClick={executeCode}>
           Execute
